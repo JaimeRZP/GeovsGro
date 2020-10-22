@@ -1,0 +1,14 @@
+# 1 & 2 ---> S. Alam 2016 https://arxiv.org/pdf/1607.03155.pdf
+# 3 ---> 6DF Beutler et al https://arxiv.org/pdf/1106.3366.pdf
+# 4 ---> BOSS LyaQSO c/(H rs) Font-Ribera et al. 1311.1767
+#rd_fid = 147.78
+#Quantity, redshift, value, id, error if not in cov 
+fsigma8   			0.38 		0.502     1
+fsigma8   			0.51		0.459     1
+fsigma8   			0.61	    0.419     1
+dv(rd_fid/rd)       0.38        1477      2
+dv(rd_fid/rd)       0.51        1877	  2
+dv(rd_fid/rd)       0.61        2140      2
+#rs/dv			    0.106   	0.327     3     0.015
+#da/rs               2.36        9         4		0.16 
+

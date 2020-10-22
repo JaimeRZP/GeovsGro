@@ -1,0 +1,4 @@
+chain_NS__accepted.txt	  Number of steps:1	 Steps accepted:16186	 acc = 1.6e+04	min(-loglike) = 90.29
+--> Total    number    of    steps: 1
+--> Total number of accepted steps: 16186
+--> Minimum of -logLike           : 90.29
