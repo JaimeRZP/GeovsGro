@@ -1,0 +1,6 @@
+#!/bin/bash
+#SBATCH -N1
+#SBATCH -n12
+#SBATCH --mail-user=zcapjru@ucl.ac.uk
+#SBATCH --mail-type=ALL 
+python /home/ug19_jrz/montepython2/montepython/MontePython.py run -p input/kiss_mark1_bao_fs_full_lyman_CMB.param -o /share/splinter/ug19_jrz/paper_results/2COSMOS/kiss_lyman_CMB_2cosmos  -m NS --NS_max_iter 10000000 --NS_sampling_efficiency 0.15 --NS_n_live_points 1000 --NS_evidence_tolerance 0.1

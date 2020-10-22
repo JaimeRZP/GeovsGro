@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH -p COMPUTE
+#SBATCH -N2
+#SBATCH -c16
+#SBATCH --ntasks-per-node=16
+#SBATCH --cpus-per-task=1
+#SBATCH --job-name=kv_cmb
+#SBATCH --mem=48GB
+#SBATCH --mail-user=zcapjru@ucl.ac.uk
+#SBATCH --mail-type=ALL
+export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
+
+export LD_LIBRARY_PATH=/home/ug19_jrz/MultiNest/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
+module load dev_tools/sep2019/gcc-9.2.0
+
+mpirun python /home/ug19_jrz/montepython2/montepython/MontePython.py run -p input/kv_cmb.param -o /share/splinter/ug19_jrz/paper_results/2COSMOS/kv_cmb  -m NS --NS_max_iter 10000000 --NS_sampling_efficiency 0.15 --NS_n_live_points 1000 --NS_evidence_tolerance 0.1

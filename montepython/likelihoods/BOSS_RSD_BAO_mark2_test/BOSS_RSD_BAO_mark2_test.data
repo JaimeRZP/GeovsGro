@@ -1,0 +1,6 @@
+#
+#BOSS_RSD+BAO_mark2
+# By Jaime Ruiz-Zapatero Jan 2020
+BOSS_RSD_BAO_mark2_test.data_directory      = data.path['data']
+BOSS_RSD_BAO_mark2_test.data_file           = 'BOSS_RSD_BAO_data_test'
+BOSS_RSD_BAO_mark2_test.cov_file            = 'BOSS_RSD_BAO_cov_test'
