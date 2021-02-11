@@ -2,7 +2,7 @@
 
 #------Experiments to test (separated with commas)-----
 
-data.experiments=['kv450_bs_2cosmos_mark3','bao_boss', 'bao_fs_boss_dr12','BOSS_DR12_Lya_combined', 'CMB_features_2018' ]
+data.experiments=['kv450_bs_2cosmos_mark3','bao_boss', 'bao_fs_boss_dr12', 'eBOSS_DR14_Lya_combined', 'CMB_features_2018' ]
 
 #------ Settings for the over-sampling. The first element will always be set to
 # 1, for it is the sampling of the cosmological parameters. The other numbers
@@ -127,12 +127,12 @@ kv450_bs_2cosmos_mark3.use_linear_pk_for_IA = False
 kv450_bs_2cosmos_mark3.type_redshift_interp = 'linear'
 kv450_bs_2cosmos_mark3.integrate_Bessel_with = 'brute_force'
 kv450_bs_2cosmos_mark3.write_out_theory = False
-kv450_bs_2cosmos_mark3.gaussian_prior_name = ['dc_1', 'Ac_1', 'dc_2', 'Ac_2']
+kv450_bs_2cosmos_mark3.gaussian_prior_name = ['dc_1', 'Ac_1', 'dc_2', 'Ac_2', 'D_z1', 'D_z2', 'D_z3', 'D_z4', 'D_z5']
 kv450_bs_2cosmos_mark3.data_directory = '/share/splinter/ug19_jrz/DATA/KV450_COSMIC_SHEAR_DATA_RELEASE/'
 kv450_bs_2cosmos_mark3.theory_weight_function_file = 'none'
 kv450_bs_2cosmos_mark3.use_joint_nuisance = False
 kv450_bs_2cosmos_mark3.theta_nodes_theory = 100
-kv450_bs_2cosmos_mark3.k_max_h_by_Mpc = 100.0
+kv450_bs_2cosmos_mark3.k_max_h_by_Mpc = 20.0
 kv450_bs_2cosmos_mark3.dx_below_threshold = 0.05
 kv450_bs_2cosmos_mark3.use_cut_theta = True
 kv450_bs_2cosmos_mark3.use_gaussian_prior_for_nuisance = True
@@ -147,7 +147,7 @@ kv450_bs_2cosmos_mark3.dlnl = 0.2
 kv450_bs_2cosmos_mark3.dx_above_threshold = 0.15
 kv450_bs_2cosmos_mark3.lmax = 60000
 kv450_bs_2cosmos_mark3.gaussian_prior_sigma = [0.0002, 0.13, 0.0002, 0.13]
-kv450_bs_2cosmos_mark3.nonlinear_min_k_max = 100.0
+kv450_bs_2cosmos_mark3.nonlinear_min_k_max = 20.0
 kv450_bs_2cosmos_mark3.xmax = 50.0
 kv450_bs_2cosmos_mark3.nzmax = 120
 
@@ -167,13 +167,13 @@ bao_fs_boss_dr12.data_directory = '/home/ug19_jrz/montepython2/data'
 bao_fs_boss_dr12.cov_file = 'COMBINEDDR12_final_consensus_dM_Hz/final_consensus_covtot_dM_Hz_fsig.txt'
 
 
-#-----Likelihood-BOSS_DR12_Lya_combined-----
-BOSS_DR12_Lya_combined.data_directory = '/home/ug19_jrz/montepython2/data'
-BOSS_DR12_Lya_combined.cf_scan = 'BOSS_DR12_scans/BOSS_DR12_Lya_combined_scan.dat'
-BOSS_DR12_Lya_combined.rd_rescale = 1.0
-BOSS_DR12_Lya_combined.transverse_fid = 39.15
-BOSS_DR12_Lya_combined.file = 'BOSS_DR12_scans/BOSS_DR12_scan_aux.txt'
-BOSS_DR12_Lya_combined.parallel_fid = 8.612
+#-----Likelihood-eBOSS_DR14_Lya_combined-----
+eBOSS_DR14_Lya_combined.data_directory = '/home/ug19_jrz/montepython2/data'
+eBOSS_DR14_Lya_combined.cf_scan = 'eBOSS_DR14_scans/eBOSS_DR14_Lya_combined_scan.dat'
+eBOSS_DR14_Lya_combined.rd_rescale = 1.0
+eBOSS_DR14_Lya_combined.transverse_fid = 39.26
+eBOSS_DR14_Lya_combined.file = 'eBOSS_DR14_scans/eBOSS_DR14_scan_aux.txt'
+eBOSS_DR14_Lya_combined.parallel_fid = 8.581
 
 
 #-----Likelihood-CMB_features_2018-----
@@ -183,11 +183,11 @@ CMB_features_2018.data_directory = '/home/ug19_jrz/montepython2/data'
 
 
 #-----------Cosmological-arguments1---------
-data.cosmo1_arguments.update({'nonlinear_min_k_max': 100.0, 'sBBN file': '/share/splinter/ug19_jrz/class_public/bbn/sBBN.dat', 'P_k_max_h/Mpc': 100.0, 'z_max_pk': 5.9750000000000005, 'non linear': ' hmcode ', 'Omega_k': 0.0, 'k_pivot': 0.05, 'N_ncdm': 0, 'output': ' mPk ', 'N_eff': 3.046})
+data.cosmo1_arguments.update({'nonlinear_min_k_max': 20.0, 'sBBN file': '/share/splinter/ug19_jrz/class_public/bbn/sBBN.dat', 'P_k_max_h/Mpc': 20.0, 'z_max_pk': 5.9750000000000005, 'non linear': ' hmcode ', 'Omega_k': 0.0, 'k_pivot': 0.05, 'N_ncdm': 0, 'output': ' mPk ', 'N_eff': 3.046})
 
 
 #-----------Cosmological-arguments2---------
-data.cosmo2_arguments.update({'nonlinear_min_k_max': 100.0, 'sBBN file': '/share/splinter/ug19_jrz/class_public/bbn/sBBN.dat', 'P_k_max_h/Mpc': 100.0, 'z_max_pk': 5.9750000000000005, 'non linear': ' hmcode ', 'Omega_k': 0.0, 'k_pivot': 0.05, 'N_ncdm': 0, 'output': ' mPk ', 'N_eff': 3.046})
+data.cosmo2_arguments.update({'nonlinear_min_k_max': 20.0, 'sBBN file': '/share/splinter/ug19_jrz/class_public/bbn/sBBN.dat', 'P_k_max_h/Mpc': 20.0, 'z_max_pk': 5.9750000000000005, 'non linear': ' hmcode ', 'Omega_k': 0.0, 'k_pivot': 0.05, 'N_ncdm': 0, 'output': ' mPk ', 'N_eff': 3.046})
 
 
 #--------Default-Configuration------

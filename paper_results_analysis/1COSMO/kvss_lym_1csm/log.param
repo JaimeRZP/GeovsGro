@@ -1,8 +1,8 @@
 #-----CLASS v2.9.0 (branch: master, hash: 75c9d34f35c03884c10575d45cfeaaab405ed5fc)-----
 
-t (separated with commas)-----
+#(separated with commas)-----
 
-data.experiments=['kv450_cf_likelihood_public', 'bao_boss', 'bao_fs_boss_dr12', 'BOSS_DR12_Lya_combined']
+data.experiments=['kv450_cf_likelihood_public', 'bao_boss', 'bao_fs_boss_dr12', 'eBOSS_DR14_Lya_combined']
 
 #------ Settings for the over-sampling. The first element will always be set to
 # 1, for it is the sampling of the cosmological parameters. The other numbers
@@ -87,7 +87,7 @@ data.write_step = 1
 kv450_cf_likelihood_public.theory_binning_const = 1.0
 kv450_cf_likelihood_public.integrate_Bessel_with = 'brute_force'
 kv450_cf_likelihood_public.use_nuisance = ['A_IA', 'dc', 'Ac', 'D_z1', 'D_z2', 'D_z3', 'D_z4', 'D_z5']
-kv450_cf_likelihood_public.nonlinear_min_k_max = 100.0
+kv450_cf_likelihood_public.nonlinear_min_k_max = 20.0
 kv450_cf_likelihood_public.dx_threshold = 0.4
 kv450_cf_likelihood_public.read_weight_func_for_binning = False
 kv450_cf_likelihood_public.use_cterm_function = True
@@ -100,7 +100,7 @@ kv450_cf_likelihood_public.gaussian_prior_name = ['dc', 'Ac', 'D_z1', 'D_z2', 'D
 kv450_cf_likelihood_public.data_directory = '/share/splinter/ug19_jrz/DATA/KV450_COSMIC_SHEAR_DATA_RELEASE/'
 kv450_cf_likelihood_public.theory_weight_function_file = 'none'
 kv450_cf_likelihood_public.theta_nodes_theory = 100
-kv450_cf_likelihood_public.k_max_h_by_Mpc = 100.0
+kv450_cf_likelihood_public.k_max_h_by_Mpc = 20.0
 kv450_cf_likelihood_public.dx_below_threshold = 0.05
 kv450_cf_likelihood_public.use_gaussian_prior_for_nuisance = True
 kv450_cf_likelihood_public.dlntheta = 0.25
@@ -133,17 +133,17 @@ bao_fs_boss_dr12.data_directory = '/home/ug19_jrz/montepython_public/data'
 bao_fs_boss_dr12.cov_file = 'COMBINEDDR12_final_consensus_dM_Hz/final_consensus_covtot_dM_Hz_fsig.txt'
 
 
-#-----Likelihood-BOSS_DR12_Lya_combined-----
-BOSS_DR12_Lya_combined.data_directory = '/home/ug19_jrz/montepython_public/data'
-BOSS_DR12_Lya_combined.cf_scan = 'BOSS_DR12_scans/BOSS_DR12_Lya_combined_scan.dat'
-BOSS_DR12_Lya_combined.rd_rescale = 1.0
-BOSS_DR12_Lya_combined.transverse_fid = 39.15
-BOSS_DR12_Lya_combined.file = 'BOSS_DR12_scans/BOSS_DR12_scan_aux.txt'
-BOSS_DR12_Lya_combined.parallel_fid = 8.612
+#-----Likelihood-eBOSS_DR14_Lya_combined-----
+eBOSS_DR14_Lya_combined.data_directory = '/home/ug19_jrz/montepython_public/data'
+eBOSS_DR14_Lya_combined.cf_scan = 'eBOSS_DR14_scans/eBOSS_DR14_Lya_combined_scan.dat'
+eBOSS_DR14_Lya_combined.rd_rescale = 1.0
+eBOSS_DR14_Lya_combined.transverse_fid = 39.26
+eBOSS_DR14_Lya_combined.file = 'eBOSS_DR14_scans/eBOSS_DR14_scan_aux.txt'
+eBOSS_DR14_Lya_combined.parallel_fid = 8.581
 
 
 #-----------Cosmological-arguments---------
-data.cosmo_arguments.update({'nonlinear_min_k_max': 100.0, 'sBBN file': '/share/splinter/ug19_jrz/class_public/bbn/sBBN.dat', 'P_k_max_h/Mpc': 100.0, 'output': ' mPk ', 'z_max_pk': 5.9750000000000005, 'm_ncdm': 0.06, 'Omega_k': 0.0, 'k_pivot': 0.05, 'non linear': ' hmcode ', 'N_ncdm': 1, 'T_ncdm': 0.71611, 'N_eff': 2.0328})
+data.cosmo_arguments.update({'nonlinear_min_k_max': 20.0, 'sBBN file': '/share/splinter/ug19_jrz/class_public/bbn/sBBN.dat', 'P_k_max_h/Mpc': 20.0, 'output': ' mPk ', 'z_max_pk': 5.9750000000000005, 'm_ncdm': 0.06, 'Omega_k': 0.0, 'k_pivot': 0.05, 'non linear': ' hmcode ', 'N_ncdm': 1, 'T_ncdm': 0.71611, 'N_eff': 2.0328})
 
 
 #--------Default-Configuration------

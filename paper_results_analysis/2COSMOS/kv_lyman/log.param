@@ -2,7 +2,7 @@
 
 #------Experiments to test (separated with commas)-----
 
-data.experiments=['kv450_bs_2cosmos_mark3', 'BOSS_DR12_Lya_combined' ]
+data.experiments=['kv450_bs_2cosmos_mark3', 'eBOSS_DR14_Lya_combined' ]
 
 #------ Settings for the over-sampling. The first element will always be set to
 # 1, for it is the sampling of the cosmological parameters. The other numbers
@@ -129,7 +129,7 @@ kv450_bs_2cosmos_mark3.use_linear_pk_for_IA = False
 kv450_bs_2cosmos_mark3.type_redshift_interp = 'linear'
 kv450_bs_2cosmos_mark3.integrate_Bessel_with = 'brute_force'
 kv450_bs_2cosmos_mark3.write_out_theory = False
-kv450_bs_2cosmos_mark3.gaussian_prior_name = ['dc_1', 'Ac_1', 'dc_2', 'Ac_2']
+kv450_bs_2cosmos_mark3.gaussian_prior_name = ['dc_1', 'Ac_1', 'dc_2', 'Ac_2', 'D_z1', 'D_z2', 'D_z3', 'D_z4', 'D_z5']
 kv450_bs_2cosmos_mark3.data_directory = '/share/splinter/ug19_jrz/DATA/KV450_COSMIC_SHEAR_DATA_RELEASE/'
 kv450_bs_2cosmos_mark3.theory_weight_function_file = 'none'
 kv450_bs_2cosmos_mark3.use_joint_nuisance = False
@@ -154,13 +154,13 @@ kv450_bs_2cosmos_mark3.xmax = 50.0
 kv450_bs_2cosmos_mark3.nzmax = 120
 
 
-#-----Likelihood-BOSS_DR12_Lya_combined-----
-BOSS_DR12_Lya_combined.data_directory = '/home/ug19_jrz/montepython2/data'
-BOSS_DR12_Lya_combined.cf_scan = 'BOSS_DR12_scans/BOSS_DR12_Lya_combined_scan.dat'
-BOSS_DR12_Lya_combined.rd_rescale = 1.0
-BOSS_DR12_Lya_combined.transverse_fid = 39.15
-BOSS_DR12_Lya_combined.file = 'BOSS_DR12_scans/BOSS_DR12_scan_aux.txt'
-BOSS_DR12_Lya_combined.parallel_fid = 8.612
+#-----Likelihood-eBOSS_DR14_Lya_combined-----
+eBOSS_DR14_Lya_combined.data_directory = '/home/ug19_jrz/montepython2/data'
+eBOSS_DR14_Lya_combined.cf_scan = 'eBOSS_DR14_scans/eBOSS_DR14_Lya_combined_scan.dat'
+eBOSS_DR14_Lya_combined.rd_rescale = 1.0
+eBOSS_DR14_Lya_combined.transverse_fid = 39.26
+eBOSS_DR14_Lya_combined.file = 'eBOSS_DR14_scans/eBOSS_DR14_scan_aux.txt'
+eBOSS_DR14_Lya_combined.parallel_fid = 8.581
 
 
 #-----------Cosmological-arguments1---------

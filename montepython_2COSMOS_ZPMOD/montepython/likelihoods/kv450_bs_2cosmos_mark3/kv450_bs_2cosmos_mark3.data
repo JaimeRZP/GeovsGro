@@ -260,7 +260,7 @@ kv450_bs_2cosmos_mark3.use_gaussian_prior_for_nuisance = True
 # add here all NUISANCE parameters for which you would like to define Gaussian priors:
 # names must match exactly to the nusiances defined above!
 # for extended KV450 systematics analysis: ['dc_1', 'Ac_1', 'dc_2', 'Ac_2']
-kv450_bs_2cosmos_mark3.gaussian_prior_name = ['dc_1', 'Ac_1', 'dc_2', 'Ac_2']
+kv450_bs_2cosmos_mark3.gaussian_prior_name = ['dc_1', 'Ac_1', 'dc_2', 'Ac_2', 'D_z1', 'D_z2', 'D_z3', 'D_z4', 'D_z5']
 
 # supply here the central values of the Gaussians (keep the order! no double checks!!!)
 # for extended KV450 systematics analysis: [0.0, 1.01, 0.0, 1.01]
